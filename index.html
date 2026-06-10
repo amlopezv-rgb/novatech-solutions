@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Infraestructura Cloud Administrada",
+  "provider": {
+    "@type": "Organization",
+    "name": "Novatech Cloud Solutions"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "CLP",
+    "offers": [
+      { "@type": "Offer", "name": "Plan Emprende", "price": "45000" },
+      { "@type": "Offer", "name": "Plan Corporativo", "price": "120000" },
+      { "@type": "Offer", "name": "Plan Enterprise Cloud", "price": "350000" }
+    ]
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la política de reembolso?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Novatech ofrece una garantía de satisfacción con un periodo de gracia total de 15 días corridos para la devolución del 100% del dinero inicial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funcionan los niveles de soporte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El Nivel 1 resuelve consultas generales mediante IA. El Nivel 3 escala fallas críticas directamente a ingenieros humanos en Chatwoot."
+        }
+      }
+    ]
+  }
+}
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novatech Cloud Solutions | Infraestructura Empresarial</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --accent: #3182ce;
+            --bg: #fafbfd;
+            --text: #2c3e50;
+            --light-box: #ebf8ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: #90cdf4;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #90cdf4;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        /* Tabla de Precios */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        .pricing-table th {
+            background-color: var(--secondary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .pricing-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        /* Políticas y Soporte */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .card ul {
+            list-style-position: inside;
+            margin-left: 5px;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #a0aec0;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        /* Espacio reservado para recordar dónde irá Chatwoot */
+        .chatwoot-placeholder {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h1>Novatech<span>.</span></h1></div>
+        <nav>
+            <a href="#precios">Precios</a>
+            <a href="#politicas">Políticas</a>
+            <a href="#soporte">Soporte</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Infraestructura Cloud de Alta Disponibilidad</h2>
+        <p>Modernizamos las plataformas operativas de tu empresa con servidores administrados y soporte experto continuo.</p>
+    </section>
+
+    <div class="container">
+        
+        <h3 class="section-title" id="precios">Planes Mensuales</h3>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Costo Mensual</th>
+                    <th>SLA de Respuesta</th>
+                    <th>Beneficios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Plan Emprende</strong></td>
+                    <td class="price">$45.000 CLP</td>
+                    <td>&lt; 12 horas</td>
+                    <td>Monitoreo básico, 1 servidor virtual, respaldos semanales.</td>
+                </tr>
+                <tr>
+                    <td><strong>Plan Corporativo</strong></td>
+                    <td class="price">$120.000 CLP</td>
+                    <td>&lt; 4 horas</td>
+                    <td>Soporte 24/7, 3 servidores virtuales, VPN dedicada.</td>
+                </tr>
+                <tr>
+                    <td><strong>Plan Enterprise Cloud</strong></td>
+                    <td class="price">$350.000 CLP</td>
+                    <td>&lt; 1 hora</td>
+                    <td>Clúster privado, auditorías de seguridad, DevOps asignado.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="grid">
+            <div class="card" id="politicas">
+                <h3>Políticas de Cancelación</h3>
+                <ul>
+                    <li><strong>Garantía de Satisfacción:</strong> Periodo de gracia total de 15 días corridos con devolución del 100% de la inversión inicial si no estás conforme.</li>
+                    <li><strong>Cancelaciones:</strong> Gestión inmediata desde el panel. La baja se hace efectiva al finalizar el ciclo de facturación vigente.</li>
+                </ul>
+            </div>
+
+            <div class="card" id="soporte">
+                <h3>Niveles de Soporte Técnico</h3>
+                <ul>
+                    <li><strong>Nivel 1 (General):</strong> Dudas de interfaces y cuentas gestionadas inicialmente por nuestro asistente inteligente con IA.</li>
+                    <li><strong>Nivel 3 (Crítico):</strong> Caídas totales del servicio se escalan de inmediato en Chatwoot directamente a ingenieros humanos de guardia.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Novatech Cloud Solutions. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="chatwoot-placeholder" onclick="alert('¡Aquí aparecerá tu chatbot automático cuando lo conectemos a Chatwoot!')">
+        🤖 Soporte en Línea
+    </div>
+
+</body>
+</html>
