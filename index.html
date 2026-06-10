@@ -335,10 +335,23 @@
         <p class="disclaimer">Nota Informativa: Este sitio web es completamente ficticio y ha sido desarrollado exclusivamente como un proyecto práctico y de investigación académica para la Universidad Andrés Bello (UNAB), orientado a la integración segura de arquitecturas RAG, Chatwoot, n8n y Qdrant.</p>
     </footer>
 
-    <!-- Marcador de posición temporal del Chatbot -->
-    <div class="chatwoot-placeholder" onclick="alert('¡Aquí aparecerá tu chatbot automático cuando lo conectemos a Chatwoot!')">
-        🤖 Soporte en Línea
-    </div>
+    <!-- Marcador de posición del Chatbot -->
+   <script>
+      (function(d,t) {
+        var BASE_URL="https://app.chatwoot.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'QwgiyMcjnb3LPr6PBjKxt2Fp',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+
 
 </body>
 </html>
