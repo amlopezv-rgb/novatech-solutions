@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Infraestructura Cloud Administrada",
-  "provider": {
-    "@type": "Organization",
-    "name": "Novatech Cloud Solutions"
-  },
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "CLP",
-    "offers": [
-      { "@type": "Offer", "name": "Plan Emprende", "price": "45000" },
-      { "@type": "Offer", "name": "Plan Corporativo", "price": "120000" },
-      { "@type": "Offer", "name": "Plan Enterprise Cloud", "price": "350000" }
-    ]
-  },
-  "mainEntity": {
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuál es la política de reembolso?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Novatech ofrece una garantía de satisfacción con un periodo de gracia total de 15 días corridos para la devolución del 100% del dinero inicial."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo funcionan los niveles de soporte?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El Nivel 1 resuelve consultas generales mediante IA. El Nivel 3 escala fallas críticas directamente a ingenieros humanos en Chatwoot."
-        }
-      }
-    ]
-  }
-}
-</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novatech Cloud Solutions | Infraestructura Empresarial</title>
+    
+    <!-- Datos Estructurados para LLMs e IA (Schema.org / JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Infraestructura Cloud Administrada",
+      "provider": {
+        "@type": "Organization",
+        "name": "Novatech Cloud Solutions"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CLP",
+        "offers": [
+          { "@type": "Offer", "name": "Plan Emprende", "price": "45000" },
+          { "@type": "Offer", "name": "Plan Corporativo", "price": "120000" },
+          { "@type": "Offer", "name": "Plan Enterprise Cloud", "price": "350000" }
+        ]
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuál es la política de reembolso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Novatech ofrece una garantía de satisfacción con un periodo de gracia total de 15 días corridos para la devolución del 100% del dinero inicial."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo funcionan los niveles de soporte?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El Nivel 1 resuelve consultas generales mediante IA. El Nivel 3 escala fallas críticas directamente a ingenieros humanos en Chatwoot."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
     <style>
         :root {
             --primary: #1a365d;
@@ -99,9 +102,9 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.85) 0%, rgba(42, 67, 101, 0.9) 100%), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200') no-repeat center center/cover;
             color: white;
-            padding: 80px 5%;
+            padding: 100px 5%;
             text-align: center;
         }
 
@@ -113,7 +116,7 @@
         .hero p {
             font-size: 18px;
             max-width: 600px;
-            margin: 0 auto 30px;
+            margin: 0 auto;
             color: #e2e8f0;
         }
 
@@ -206,12 +209,20 @@
             background-color: var(--primary);
             color: #a0aec0;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             font-size: 14px;
             margin-top: 60px;
         }
 
-        /* Espacio reservado para recordar dónde irá Chatwoot */
+        .disclaimer {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #2d3748;
+            font-size: 12px;
+            color: #718096;
+            font-style: italic;
+        }
+
         .chatwoot-placeholder {
             position: fixed;
             bottom: 20px;
@@ -238,69 +249,78 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h2>Infraestructura Cloud de Alta Disponibilidad</h2>
-        <p>Modernizamos las plataformas operativas de tu empresa con servidores administrados y soporte experto continuo.</p>
-    </section>
+    <main>
+        <!-- Sección Principal con Imagen de Fondo Profesional -->
+        <section class="hero">
+            <h2>Infraestructura Cloud de Alta Disponibilidad</h2>
+            <p>Modernizamos las plataformas operativas de tu empresa con servidores administrados y soporte experto continuo.</p>
+        </section>
 
-    <div class="container">
-        
-        <h3 class="section-title" id="precios">Planes Mensuales</h3>
-        <table class="pricing-table">
-            <thead>
-                <tr>
-                    <th>Plan</th>
-                    <th>Costo Mensual</th>
-                    <th>SLA de Respuesta</th>
-                    <th>Beneficios</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Plan Emprende</strong></td>
-                    <td class="price">$45.000 CLP</td>
-                    <td>&lt; 12 horas</td>
-                    <td>Monitoreo básico, 1 servidor virtual, respaldos semanales.</td>
-                </tr>
-                <tr>
-                    <td><strong>Plan Corporativo</strong></td>
-                    <td class="price">$120.000 CLP</td>
-                    <td>&lt; 4 horas</td>
-                    <td>Soporte 24/7, 3 servidores virtuales, VPN dedicada.</td>
-                </tr>
-                <tr>
-                    <td><strong>Plan Enterprise Cloud</strong></td>
-                    <td class="price">$350.000 CLP</td>
-                    <td>&lt; 1 hora</td>
-                    <td>Clúster privado, auditorías de seguridad, DevOps asignado.</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="container">
+            
+            <!-- Sección de Precios -->
+            <h3 class="section-title" id="precios">Planes Mensuales</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Costo Mensual</th>
+                        <th>SLA de Respuesta</th>
+                        <th>Beneficios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Plan Emprende</strong></td>
+                        <td class="price">$45.000 CLP</td>
+                        <td>&lt; 12 horas</td>
+                        <td>Monitoreo básico, 1 servidor virtual, respaldos semanales.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plan Corporativo</strong></td>
+                        <td class="price">$120.000 CLP</td>
+                        <td>&lt; 4 horas</td>
+                        <td>Soporte 24/7, 3 servidores virtuales, VPN dedicada.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plan Enterprise Cloud</strong></td>
+                        <td class="price">$350.000 CLP</td>
+                        <td>&lt; 1 hora</td>
+                        <td>Clúster privado, auditorías de seguridad, DevOps asignado.</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <div class="grid">
-            <div class="card" id="politicas">
-                <h3>Políticas de Cancelación</h3>
-                <ul>
-                    <li><strong>Garantía de Satisfacción:</strong> Periodo de gracia total de 15 días corridos con devolución del 100% de la inversión inicial si no estás conforme.</li>
-                    <li><strong>Cancelaciones:</strong> Gestión inmediata desde el panel. La baja se hace efectiva al finalizar el ciclo de facturación vigente.</li>
-                </ul>
+            <div class="grid">
+                <!-- Sección de Políticas -->
+                <article class="card" id="politicas">
+                    <h3>Políticas de Cancelación</h3>
+                    <ul>
+                        <li><strong>Garantía de Satisfacción:</strong> Periodo de gracia total de 15 días corridos con devolución del 100% de la inversión inicial si no estás conforme.</li>
+                        <li><strong>Cancelaciones:</strong> Gestión inmediata desde el panel. La baja se hace efectiva al finalizar el ciclo de facturación vigente.</li>
+                    </ul>
+                </article>
+
+                <!-- Sección de Soporte -->
+                <article class="card" id="soporte">
+                    <h3>Niveles de Soporte Técnico</h3>
+                    <ul>
+                        <li><strong>Nivel 1 (General):</strong> Dudas de interfaces y cuentas gestionadas inicialmente por nuestro asistente inteligente con IA.</li>
+                        <li><strong>Nivel 3 (Crítico):</strong> Caídas totales del servicio se escalan de inmediato en Chatwoot directamente a ingenieros humanos de guardia.</li>
+                    </ul>
+                </article>
             </div>
 
-            <div class="card" id="soporte">
-                <h3>Niveles de Soporte Técnico</h3>
-                <ul>
-                    <li><strong>Nivel 1 (General):</strong> Dudas de interfaces y cuentas gestionadas inicialmente por nuestro asistente inteligente con IA.</li>
-                    <li><strong>Nivel 3 (Crítico):</strong> Caídas totales del servicio se escalan de inmediato en Chatwoot directamente a ingenieros humanos de guardia.</li>
-                </ul>
-            </div>
         </div>
-
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Novatech Cloud Solutions. Todos los derechos reservados.</p>
+        <!-- Nota al pie de página académica / Disclaimer solicitado -->
+        <p class="disclaimer">Nota Informativa: Este sitio web es completamente ficticio y ha sido desarrollado exclusivamente como un proyecto práctico y de investigación académica para la Universidad Andrés Bello (UNAB), orientado a la integración segura de arquitecturas RAG, Chatwoot, n8n y Qdrant.</p>
     </footer>
 
+    <!-- Marcador de posición temporal del Chatbot -->
     <div class="chatwoot-placeholder" onclick="alert('¡Aquí aparecerá tu chatbot automático cuando lo conectemos a Chatwoot!')">
         🤖 Soporte en Línea
     </div>
